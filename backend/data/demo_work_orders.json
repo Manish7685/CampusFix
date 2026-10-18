@@ -1,0 +1,9 @@
+{
+  "source": "Local synthetic demo fixture; not campus work orders",
+  "synthetic": true,
+  "records": [
+    {"id": "REQ-001", "description": "Water leaking near the second-floor computer lab in Block A", "status": "open", "location_id": null, "issue_type": "plumbing", "location_note": "Original demo record has no uniquely resolved canonical location."},
+    {"id": "REQ-002", "description": "Lights flickering in Room 204 in Block B", "status": "open", "location_id": null, "issue_type": "electrical", "location_note": "Original demo record has no uniquely resolved canonical location."},
+    {"id": "DEMO-003", "description": "Wi-Fi not working in CL101", "status": "open", "location_id": "CODE-CL101", "issue_type": "network", "location_note": "Added test fixture; not an actual complaint."}
+  ]
+}

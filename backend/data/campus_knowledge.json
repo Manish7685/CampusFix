@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0",
+  "project": "CampusFix",
+  "campus": {
+    "name": "IIIT Raichur",
+    "source": "User-completed CampusFix questionnaire and campus blueprint",
+    "status": "Under construction; blueprint covers most of the plan",
+    "resolution_rules": {
+      "ambiguous": "Ask a clarifying question and list likely options",
+      "unknown": "Do not invent; ask for clarification",
+      "unverified": "Show as a candidate and ask for confirmation",
+      "preserve_original_location_text": true,
+      "high_severity": "Require human approval before assignment",
+      "photo_text_disagreement": "Ask reporter to clarify",
+      "privacy": "Do not provide bypass instructions for restricted hostel access",
+      "unknown_locations": "Allow likely candidate selection and manual descriptions; manual descriptions remain unverified until confirmed",
+      "broad_reports": "Clarify whether scope is campus-wide or limited to specific buildings/floors before finalizing",
+      "manual_location_submission": "Students may submit any location description. Always mark it UNVERIFIED, preserve the original text, and ask the student to confirm or clarify it again. Do not treat the location as canonical or verified until confirmation.",
+      "confirmation_after_manual_entry": "Required"
+    }
+  },
+  "locations": [
+    {
+      "id": "HOSTEL-A",
+      "name": "A Block Hostel",
+      "aliases": [
+        "A Block",
+        "A Hostel",
+        "Girls' Hostel"
+      ],
+      "type": "hostel",
+      "floors": 4,
+      "status": "user-confirmed",
+      "details": [
+        "Stairs at corridor end away from B Block",
+        "Same design as C Block",
+        "Corridor connection with B on floors 1-4"
+      ],
+      "privacy": "Respect girls' hostel access restriction; do not give bypass instructions."
+    },
+    {
+      "id": "HOSTEL-B",
+      "name": "B Block Hostel",
+      "aliases": [
+        "B Block",
+        "B Hostel",
+        "Boys' Hostel"
+      ],
+      "type": "hostel",
+      "floors": 6,
+      "status": "user-confirmed",
+      "details": [
+        "Between A and C Blocks",
+        "Stairs at both corridor ends",
+        "Two lifts",
+        "Connects to A and C on floors 1-4 only",
+        "Floors 5-6 do not connect to A or C"
+      ],
+      "privacy": "Entrance from B Block to girls' hostel is restricted for privacy; do not give bypass instructions."
+    },
+    {
+      "id": "HOSTEL-C",
+      "name": "C Block Hostel",
+      "aliases": [
+        "C Block",
+        "C Hostel",
+        "Boys' Hostel"
+      ],
+      "type": "hostel",
+      "floors": 4,
+      "status": "user-confirmed",
+      "details": [
+        "Stairs at corridor end away from B Block",
+        "Same design as A Block",
+        "Corridor connection with B on floors 1-4"
+      ]
+    },
+    {
+      "id": "ACADEMIC-BLOCK",
+      "name": "Academic Block",
+      "aliases": [
+        "Acad Block"
+      ],
+      "type": "academic_building",
+      "floors": 3,
+      "floor_mapping": "There is no ground floor. The building has 1st, 2nd, and 3rd floors.",
+      "details": [
+        "Five classrooms per floor",
+        "Boys' and girls' washrooms",
+        "Drinking water near washrooms",
+        "Four staircases per floor",
+        "Glass-covered open-air cafe on top floor",
+        "One computer lab per floor; CL101 means floor 1, lab 01.",
+        "Underground Auditorium is associated with the 1st floor and has stairs descending somewhat underground; the name does not mean the building has a ground floor."
+      ],
+      "status": "user-confirmed floor labels and auditorium description",
+      "floor_labels": [
+        "1st floor",
+        "2nd floor",
+        "3rd floor"
+      ]
+    },
+    {
+      "id": "ADMIN-BLOCK",
+      "name": "Admin Block",
+      "aliases": [
+        "Admin"
+      ],
+      "type": "administration",
+      "floors": 3,
+      "details": [
+        "Reception near entrance",
+        "Professor cabins",
+        "Connected to Training and Placement Cell Block by glass connector"
+      ],
+      "status": "user-provided"
+    },
+    {
+      "id": "TNP-BLOCK",
+      "name": "Training and Placement Cell Block",
+      "aliases": [
+        "TnP Block",
+        "Placement Cell"
+      ],
+      "type": "administration",
+      "floors": 3,
+      "details": [
+        "Reception near entrance",
+        "Interview rooms",
+        "Connected to Admin Block by glass connector"
+      ],
+      "status": "user-provided"
+    },
+    {
+      "id": "OPEN-AIR-THEATRE",
+      "name": "Open-Air Theatre",
+      "aliases": [
+        "Plaza"
+      ],
+      "type": "event_space",
+      "details": [
+        "Stage",
+        "Semicircular tiered seating"
+      ],
+      "status": "user-provided"
+    },
+    {
+      "id": "DINING-MESS",
+      "name": "Dining / Mess Building",
+      "aliases": [
+        "Dining",
+        "Mess",
+        "Canteen"
+      ],
+      "type": "dining",
+      "floors": 2,
+      "details": [
+        "Floor 1: mess area",
+        "Floor 2: canteen"
+      ],
+      "status": "user-provided"
+    },
+    {
+      "id": "GATE-01",
+      "name": "Gate 01",
+      "aliases": [
+        "Main Gate"
+      ],
+      "type": "gate",
+      "status": "user-confirmed"
+    },
+    {
+      "id": "GATE-02",
+      "name": "Gate 2",
+      "aliases": [
+        "Back Gate"
+      ],
+      "type": "gate",
+      "status": "user-confirmed"
+    }
+  ],
+  "room_code_examples": [
+    {
+      "code": "C306",
+      "meaning": "C Block, floor 3, room 06",
+      "type": "C Block Hostel",
+      "status": "user-confirmed"
+    },
+    {
+      "code": "LH103",
+      "meaning": "Lecture Hall/classroom, floor 1, room 03",
+      "type": "Academic Block",
+      "status": "user-provided-example"
+    },
+    {
+      "code": "CL101",
+      "meaning": "Computer Lab, floor 1, lab 01",
+      "type": "Academic Block",
+      "status": "user-confirmed"
+    },
+    {
+      "code": "CL201",
+      "meaning": "Computer Lab, floor 2, lab 01",
+      "type": "Academic Block",
+      "status": "user-provided-example"
+    },
+    {
+      "code": "B201",
+      "meaning": "B Block, floor 2, room 01",
+      "type": "B Block Hostel",
+      "status": "user-confirmed"
+    },
+    {
+      "code": "CL301",
+      "meaning": "Computer Lab, floor 3, lab 01",
+      "type": "Academic Block",
+      "status": "user-confirmed"
+    }
+  ],
+  "excluded_or_nonexistent": [
+    {
+      "name": "Future Guest House",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "Faculty Apartments",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "Market",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "Solid Waste",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "WTP",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "STP-1",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "STP-2",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "ESS-1",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "ESS-2",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "Gate 3",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "STB-A",
+      "reason": "User requested exclusion"
+    },
+    {
+      "name": "Cricket Ground",
+      "reason": "User says it does not currently exist"
+    },
+    {
+      "name": "Library",
+      "reason": "User says it does not exist"
+    }
+  ],
+  "sample_tests": [
+    {
+      "input": "When will the sink in B Block 2nd floor washroom near Room B201 be fixed?",
+      "expected": "Resolve B Block floor 2; identify washroom near B201 only if unique, otherwise ask."
+    },
+    {
+      "input": "Wi-Fi cable broken in C Block 4th floor.",
+      "expected": "Resolve C Block floor 4; classify as network/Wi-Fi."
+    },
+    {
+      "input": "Power backup in CL101 has not started yet.",
+      "expected": "Resolve CL101 as Academic Block computer lab, floor 1, lab 01; classify as power/electrical."
+    },
+    {
+      "input": "No water supply in any washroom.",
+      "expected": "Ask whether scope is campus-wide or which buildings/floors are affected before finalizing."
+    },
+    {
+      "input": "Wi-Fi not working in Computer Lab.",
+      "expected": "Ask which computer lab and offer candidates."
+    },
+    {
+      "input": "No power in my room.",
+      "expected": "Ask which building/hostel and room number."
+    },
+    {
+      "input": "Cricket Ground",
+      "expected": "Do not resolve as an existing location; ask for clarification."
+    },
+    {
+      "input": "Library",
+      "expected": "Do not resolve as an existing location; ask for clarification."
+    }
+  ],
+  "pending_questions": [
+    "Should users be allowed to submit unknown locations as unverified candidates, or only select existing candidates?"
+  ],
+  "location_resolution": {
+    "detail_goal": "Resolve as precisely as available evidence supports",
+    "ambiguous_match_policy": "Ask a clarifying question and list likely options",
+    "unknown_match_policy": "Offer likely candidates and allow a manually entered description saved as unverified",
+    "manual_resolution": "Allow any manually entered location description, preserve original text, mark UNVERIFIED, and ask a follow-up confirmation/clarification question before treating it as resolved.",
+    "broad_report_policy": "Ask the reporter to confirm campus-wide scope or specify affected buildings/floors",
+    "store_original_text": true,
+    "ground_floor_policy": "Do not create a ground floor for the Academic Block; it has 1st, 2nd, and 3rd floors.",
+    "underground_auditorium": "Associated with the 1st floor; stairs descend somewhat underground. Preserve the user-provided name."
+  },
+  "room_code_rules": {
+    "applies_across_campus": true,
+    "CL": "Computer Lab. In the Academic Block, CL codes refer only to computer labs; do not infer other lab types.",
+    "LH": "Lecture Hall.",
+    "examples": {
+      "C306": "C Block Hostel, floor 3, room 06",
+      "LH103": "Lecture Hall/classroom, Academic Block, floor 1, room 03",
+      "CL101": "Academic Block, floor 1, Computer Lab 01",
+      "CL201": "Academic Block, floor 2, Computer Lab 01",
+      "B201": "B Block Hostel, floor 2, room 01",
+      "CL301": "Academic Block, floor 3, Computer Lab 01"
+    },
+    "format_policy": "Use only explicitly documented or user-confirmed codes. Do not generate room IDs by guessing. Preserve the original reported location text and request confirmation for unverified codes."
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.1",
+  "owner_approved": true,
+  "policy": "User-approved CampusFix routing policy. Emergency/critical complaints override ordinary routing and are proposed to all listed council members. Routing is a proposal only; no dispatch or persistence is performed.",
+  "eligible_roles": [
+    "HSS1 — Hostel and Safety Secretary 1 (Boys)",
+    "HSS2 — Hostel and Safety Secretary 2 (Girls)",
+    "Sports Secretary",
+    "General Secretary 1 (Boys)",
+    "General Secretary 2 (Girls)",
+    "Academic Secretary",
+    "Mess Secretary"
+  ],
+  "rules": [
+    {
+      "id": "HOSTEL-BC-ALL",
+      "roles": [
+        "HSS1 — Hostel and Safety Secretary 1 (Boys)"
+      ],
+      "location_ids": [
+        "HOSTEL-B",
+        "HOSTEL-C"
+      ],
+      "issue_types": [
+        "*"
+      ],
+      "responsibility_evidence": "User-approved policy: all non-Wi-Fi hostel complaints in B and C route to HSS1; Wi-Fi also includes GS1."
+    },
+    {
+      "id": "HOSTEL-A-ALL",
+      "roles": [
+        "HSS2 — Hostel and Safety Secretary 2 (Girls)"
+      ],
+      "location_ids": [
+        "HOSTEL-A"
+      ],
+      "issue_types": [
+        "*"
+      ],
+      "responsibility_evidence": "User-approved policy: all non-Wi-Fi hostel complaints in A route to HSS2; Wi-Fi also includes GS2."
+    },
+    {
+      "id": "HOSTEL-BC-WIFI",
+      "roles": [
+        "HSS1 — Hostel and Safety Secretary 1 (Boys)",
+        "General Secretary 1 (Boys)"
+      ],
+      "location_ids": [
+        "HOSTEL-B",
+        "HOSTEL-C"
+      ],
+      "issue_types": [
+        "network"
+      ],
+      "responsibility_evidence": "User-approved policy: B/C hostel Wi-Fi goes to HSS1 and General Secretary 1."
+    },
+    {
+      "id": "HOSTEL-A-WIFI",
+      "roles": [
+        "HSS2 — Hostel and Safety Secretary 2 (Girls)",
+        "General Secretary 2 (Girls)"
+      ],
+      "location_ids": [
+        "HOSTEL-A"
+      ],
+      "issue_types": [
+        "network"
+      ],
+      "responsibility_evidence": "User-approved policy: A hostel Wi-Fi goes to HSS2 and General Secretary 2."
+    },
+    {
+      "id": "ACADEMIC-ALL",
+      "roles": [
+        "Academic Secretary"
+      ],
+      "location_ids": [
+        "ACADEMIC-BLOCK"
+      ],
+      "issue_types": [
+        "*"
+      ],
+      "responsibility_evidence": "User-approved policy: all Academic Block complaints route to Academic Secretary; explicitly includes Wi-Fi and electrical issues."
+    },
+    {
+      "id": "SPORTS-ALL",
+      "roles": [
+        "Sports Secretary"
+      ],
+      "location_ids": [
+        "SPORTS-GROUNDS"
+      ],
+      "issue_types": [
+        "*"
+      ],
+      "responsibility_evidence": "Previously supplied Student Council rules: Sports Secretary handles Sports Grounds complaints."
+    },
+    {
+      "id": "ADMIN-TNP-PLAZA-GATES",
+      "roles": [
+        "General Secretary 1 (Boys)",
+        "General Secretary 2 (Girls)"
+      ],
+      "location_ids": [
+        "ADMIN-BLOCK",
+        "TNP-BLOCK",
+        "OPEN-AIR-THEATRE",
+        "GATE-01",
+        "GATE-02"
+      ],
+      "issue_types": [
+        "*"
+      ],
+      "responsibility_evidence": "User-approved policy: Admin, TnP, Open-Air Theatre, and gates route to both General Secretaries."
+    },
+    {
+      "id": "CAMPUS-WIDE-INFRASTRUCTURE",
+      "roles": [
+        "General Secretary 1 (Boys)",
+        "General Secretary 2 (Girls)"
+      ],
+      "location_ids": [
+        "CAMPUS-WIDE-INFRASTRUCTURE"
+      ],
+      "issue_types": [
+        "*"
+      ],
+      "responsibility_evidence": "User-approved policy: campus-wide infrastructure complaints route to both General Secretaries."
+    },
+    {
+      "id": "MESS-ALL",
+      "roles": [
+        "Mess Secretary"
+      ],
+      "location_ids": [
+        "DINING-MESS"
+      ],
+      "issue_types": [
+        "*"
+      ],
+      "responsibility_evidence": "User-approved policy: Mess/Canteen complaints route to Mess Secretary."
+    },
+    {
+      "id": "ALL-HOSTELS-WIFI",
+      "roles": [
+        "HSS1 — Hostel and Safety Secretary 1 (Boys)",
+        "HSS2 — Hostel and Safety Secretary 2 (Girls)",
+        "General Secretary 1 (Boys)",
+        "General Secretary 2 (Girls)"
+      ],
+      "location_ids": [
+        "ALL-HOSTELS"
+      ],
+      "issue_types": [
+        "network"
+      ],
+      "responsibility_evidence": "Previously supplied Student Council rules: Wi-Fi across all hostels includes HSS1, HSS2, GS1 and GS2."
+    }
+  ],
+  "unresolved": [
+    "Confirm the exact configured role identifier for Mess Secretary before live deployment.",
+    "Confirm whether the role label Sports Secretary is still correct before live deployment.",
+    "Human safety approver and escalation contact/process are not configured."
+  ]
+}

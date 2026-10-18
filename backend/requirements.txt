@@ -1,0 +1,3 @@
+# CampusFix backend dependencies
+# Install Neuro-SAN through the authorized distribution provided for the hackathon.
+neuro-san==0.7.7
